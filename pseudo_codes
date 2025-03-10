@@ -1,0 +1,107 @@
+       Programme for  Fibonacci Sequence Generator
+
+
+def fibonacci(n):
+    fib_sequence = [0, 1]
+    while len(fib_sequence) < n:
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+    return fib_sequence
+
+n = int(input("Enter the number of terms: "))
+print(fibonacci(n))
+
+
+
+
+
+           Prime Number Checker
+
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
+num = int(input("Enter a number: "))
+if is_prime(num):
+    print(num, "is a prime number")
+else:
+    print(num, "is not a prime number")
+
+
+
+                 Student Grade Calculator
+
+
+assignment_weight = 0.3
+midterm_weight = 0.3
+final_weight = 0.4
+
+passing_marks = 60
+
+assignment_score = float(input("Enter the assignment score (0-100): "))
+midterm_score = float(input("Enter the midterm exam score (0-100): "))
+final_score = float(input("Enter the final exam score (0-100): "))
+
+final_grade = (assignment_score * ASSIGNMENT_WEIGHT +
+                midterm_score * MIDTERM_WEIGHT +
+                final_score * FINAL_WEIGHT)
+
+if final_grade >= PASSING_GRADE:
+    print(f"The student passed with a final grade of {final_grade:.2f}%")
+else:
+    print(f"The student failed with a final grade of {final_grade:.2f}%")
+
+
+
+       ATM Banking System
+
+START 
+DISPLAY"enter your pin:"
+INPUT userpin
+IF userpin is incorrect THEN 
+DISPLAY "invalid pin try again."
+EXIT
+ENDIF
+SET balance=15000
+REPEAT
+DISPLAY"ATM menu:"
+DISPLAY"1.check balance"
+DISPLAY"2.deposit money"
+DISPLAY"3.withdraw money"
+DISPLAY"4.exit"
+DISPLAY"choose an option:"
+INPUT choice
+
+IF choice=1 THEN
+DISPLAY "your balance is",balance
+ELSE IF choice=2 THEN
+DISPLAY"enter amount to deposit:"
+INPUT depositAmount
+  SET balance = balance + depositAmount
+  DISPLAY "Deposit successful. New balance: ", balance
+  ELSE IF choice = 3 THEN
+  DISPLAY "Enter amount to withdraw:"
+  INPUT withdrawAmount
+  IF withdrawAmount > balance THEN
+  DISPLAY "Insufficient funds!"
+ELSE
+ SET balance = balance - withdrawAmount
+DISPLAY "Withdrawal successful. New balance: ", balance
+ENDIF
+ELSE IF choice = 4 THEN
+DISPLAY "Thank you for using our ATM."
+EXIT
+ELSE
+DISPLAY "Invalid choice. Please try again."
+ ENDIF
+    UNTIL choice = 4
+END
+
+
+
+
+
