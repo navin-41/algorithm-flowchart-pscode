@@ -1,0 +1,46 @@
+Inventory Management System
+Variables
+- inventory: a dictionary to store items, where each key is a unique ID and each value is an item object
+- item: an object with attributes id, name, price, and quantity
+
+Procedures
+Add Item
+1. INPUT item details: id, name, price, and quantity
+2. CHECK if id already exists in inventory
+3. If id exists, DISPLAY error message
+4. If id does not exist, CREATE new item object and ADD to inventory
+
+Update Item
+1. INPUT item id
+2. SEARCH for item in inventory by id
+3. If item found, INPUT new price and/or quantity
+4. UPDATE item details in inventory
+
+Remove Item
+1. INPUT item id
+2. SEARCH for item in inventory by id
+3. If item found, CONFIRM removal
+4. If confirmed, REMOVE item from inventory
+
+Search Item
+1. INPUT item id or name
+2. SEARCH for item in inventory by id or name
+3. If item found, DISPLAY item details
+
+Display Inventory
+1. DISPLAY all items in inventory, including id, name, price, and quantity
+
+Track Low Stock
+1. SET low stock threshold
+2. LOOP through all items in inventory
+3. If item quantity is below threshold, DISPLAY item details
+
+Generate Report
+1. SELECT report type (e.g. inventory summary, low stock report)
+2. GENERATE report based on selected type
+
+Main Program
+1. DISPLAY main menu
+2. INPUT user choice
+3. PERFORM chosen action (e.g. add item, update item, etc.)
+4. REPEAT until user chooses to exit
